@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dep-claim-audit"
+version = "0.1.0"
+description = "Offline static audit of Python dependency and compatibility claims"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.scripts]
+dep-claim-audit = "dep_claim_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
